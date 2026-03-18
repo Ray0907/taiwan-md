@@ -1,0 +1,207 @@
+backend:
+  name: github
+  repo: frank890417/taiwan-md
+  branch: main
+  open_authoring: true
+
+publish_mode: editorial_workflow
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+locale: zh_Hant
+
+slug:
+  encoding: unicode
+  clean_accents: false
+
+collections:
+  # 中文文章
+  - name: history-zh
+    label: "歷史 (History)"
+    folder: knowledge/History
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: &article_fields_zh
+      - { label: "標題", name: title, widget: string }
+      - { label: "描述", name: description, widget: string, required: false }
+      - { label: "日期", name: date, widget: datetime }
+      - { label: "標籤", name: tags, widget: list, required: false }
+      - { label: "作者", name: author, widget: string, required: false }
+      - { label: "閱讀時間（分鐘）", name: readingTime, widget: number, required: false }
+      - { label: "精選", name: featured, widget: boolean, default: false, required: false }
+      - { label: "草稿", name: draft, widget: boolean, default: false, required: false }
+      - { label: "內容", name: body, widget: markdown }
+
+  - name: geography-zh
+    label: "地理 (Geography)"
+    folder: knowledge/Geography
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: culture-zh
+    label: "文化 (Culture)"
+    folder: knowledge/Culture
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: food-zh
+    label: "美食 (Food)"
+    folder: knowledge/Food
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: art-zh
+    label: "藝術 (Art)"
+    folder: knowledge/Art
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: music-zh
+    label: "音樂 (Music)"
+    folder: knowledge/Music
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: technology-zh
+    label: "科技 (Technology)"
+    folder: knowledge/Technology
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: nature-zh
+    label: "自然 (Nature)"
+    folder: knowledge/Nature
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: people-zh
+    label: "人物 (People)"
+    folder: knowledge/People
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: society-zh
+    label: "社會 (Society)"
+    folder: knowledge/Society
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: economy-zh
+    label: "經濟 (Economy)"
+    folder: knowledge/Economy
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  - name: lifestyle-zh
+    label: "生活 (Lifestyle)"
+    folder: knowledge/Lifestyle
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_zh
+
+  # English articles
+  - name: history-en
+    label: "History (EN)"
+    folder: knowledge/en/History
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: &article_fields_en
+      - { label: "Title", name: title, widget: string }
+      - { label: "Description", name: description, widget: string, required: false }
+      - { label: "Date", name: date, widget: datetime }
+      - { label: "Tags", name: tags, widget: list, required: false }
+      - { label: "Author", name: author, widget: string, required: false }
+      - { label: "Reading Time (min)", name: readingTime, widget: number, required: false }
+      - { label: "Featured", name: featured, widget: boolean, default: false, required: false }
+      - { label: "Draft", name: draft, widget: boolean, default: false, required: false }
+      - { label: "Content", name: body, widget: markdown }
+
+  - name: geography-en
+    label: "Geography (EN)"
+    folder: knowledge/en/Geography
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_en
+
+  - name: culture-en
+    label: "Culture (EN)"
+    folder: knowledge/en/Culture
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_en
+
+  - name: food-en
+    label: "Food (EN)"
+    folder: knowledge/en/Food
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_en
+
+  - name: technology-en
+    label: "Technology (EN)"
+    folder: knowledge/en/Technology
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_en
+
+  - name: nature-en
+    label: "Nature (EN)"
+    folder: knowledge/en/Nature
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_en
+
+  - name: society-en
+    label: "Society (EN)"
+    folder: knowledge/en/Society
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields: *article_fields_en
